@@ -1,0 +1,123 @@
+﻿# Ignore the build output directories
+/bin
+/obj
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Node.js dependencies
+node_modules/
+
+# NuGet packages
+*.nupkg
+# The packages folder can be ignored because of the presence of 'project.json' or 'packages.config' files.
+**/packages/*
+
+# Rider
+.idea/
+*.sln.iml
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# DotNet specific ignores
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# StyleCop
+StyleCopReport.xml
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# Azure Stream Analytics
+*.asa.config
+
+# Entity Framework
+*.jfm
+
+# VS Code directories
+.history/
+
+# Backup & report files from converting an old project file
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+
+# NUNIT
+*.VisualState.xml
+TestResult.xml
+
+# Build Results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Web Servers
+iisexpress/
+.config/
+*.config
+config/
+
+# Publish Web Output
+*.Publish.xml
+*.azurePubxml
+*.azurePubxml.pubxml.user
+
+# Web Files
+.sass-cache/
+.aspnet/
+
+# Python Tools for Visual Studio (PTVS)
+__pycache__/
+*.py[cod]
+
+# Microsoft Fakes
+FakesAssemblies/
+
+# Windows image file caches
+
+# Folder config file
+
+# Recycle Bin used on file shares
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+# Rider project directories
+
+# End of template
