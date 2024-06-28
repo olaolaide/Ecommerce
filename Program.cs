@@ -1,20 +1,13 @@
-using Ecommerce.Data;
-using Microsoft.EntityFrameworkCore;
+using Ecommerce.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-{
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
-builder.Services.AddControllers();
-
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+// Configure services
+builder.Services.ConfigureServices(builder.Configuration);
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -23,8 +16,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+// Use authentication and authorization middleware
+app.UseAuthentication();
 app.UseAuthorization();
 
+// Map controller endpoints
 app.MapControllers();
 
 app.Run();
