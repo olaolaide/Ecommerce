@@ -95,4 +95,16 @@ public class AuthController(
 
         return BadRequest(result);
     }
+
+    [HttpPost("login")]
+    public async Task<ActionResult<ResponseLoginDto>> Login([FromBody] RequestLoginDto userLogin)
+    {
+        var authResponse = await authRepository.Login(userLogin);
+        if (authResponse.Result == false)
+        {
+            return BadRequest(authResponse);
+        }
+
+        return Ok(authResponse);
+    }
 }

@@ -12,4 +12,6 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
         base.OnModelCreating(builder);
         builder.ApplyConfiguration(new RoleConfiguration());
     }
+
+    public DbSet<RefreshToken> RefreshTokens { get; set; }
 }

@@ -7,4 +7,6 @@ public interface IAuthRepository
 {
     Task<ResponseApiUserRegisterDto> Register(RequestApiUserRegisterDto userDto);
     Task<ResponseApiUserRegisterDto> RegisterAdmin(RequestApiUserRegisterDto userDto, int secretKey);
+    
+    Task<ResponseLoginDto> Login(RequestLoginDto login);
 }
