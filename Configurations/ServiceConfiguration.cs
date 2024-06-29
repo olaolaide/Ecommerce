@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using Ecommerce.Data;
 using Ecommerce.Models.AuthModels;
+using Ecommerce.Repositories.AuthRepository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -63,6 +64,12 @@ namespace Ecommerce.Configurations
             // Add API explorer and Swagger for API documentation
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
+
+            services.AddScoped<IAuthRepository, AuthRepository>();
+            services
+                .AddFluentEmail("admin@test.com")
+                .AddRazorRenderer()
+                .AddSmtpSender("localhost", 25);
         }
     }
 }
